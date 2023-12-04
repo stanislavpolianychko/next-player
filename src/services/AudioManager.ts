@@ -1,5 +1,5 @@
 class AudioManager {
-    private readonly episodes: any[];
+    public readonly episodes: any[];
     private currentPlaying: { audio: HTMLAudioElement; id: number } | null = null;
     private isOperationInProgress: boolean = false;
 
