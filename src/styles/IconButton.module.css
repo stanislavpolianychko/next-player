@@ -1,0 +1,13 @@
+/* Icon Button Styles */
+.iconButton {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Icon Styles */
+.icon {
+    height: 30px;
+    width: 30px;
+}
