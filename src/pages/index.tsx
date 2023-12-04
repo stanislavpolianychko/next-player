@@ -2,6 +2,7 @@ import React from "react";
 import Header from "@/components/Header";
 import Recorder from "@/components/Recorder";
 import EpisodesList from "@/components/EpisodesList";
+import config from "../../config";
 
 
 const Home = () => {
@@ -11,7 +12,7 @@ const Home = () => {
             <Header headerText={"All episodes"}/>
 
             {/* EpisodesList component displaying a list of episodes from the provided URL */}
-            <EpisodesList url={'https://anchor.fm/s/8a651488/podcast/rss'}></EpisodesList>
+            <EpisodesList url={config.podcastsUrl}></EpisodesList>
 
             {/* Recorder component for recording audio */}
             <Recorder/>
