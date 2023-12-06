@@ -84,8 +84,6 @@ class RecordingManager {
     private handleDataAvailable = (event: BlobEvent) => {
         if (event.data && event.data.size > 0) {
             this.audioBlob = event.data;
-            console.log("Recorded audio MIME type:", event.data.type);
-            console.log("Recorded audio blob size:", event.data.size);
         }
     };
 
