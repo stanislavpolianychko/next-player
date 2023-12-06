@@ -192,13 +192,6 @@
   dependencies:
     tslib "^2.4.0"
 
-"@types/fluent-ffmpeg@^2.1.24":
-  version "2.1.24"
-  resolved "https://registry.yarnpkg.com/@types/fluent-ffmpeg/-/fluent-ffmpeg-2.1.24.tgz#f53c57700bc4360ac638554545c8da2c465434c1"
-  integrity sha512-g5oQO8Jgi2kFS3tTub7wLvfLztr1s8tdXmRd8PiL/hLMLzTIAyMR2sANkTggM/rdEDAg3d63nYRRVepwBiCw5A==
-  dependencies:
-    "@types/node" "*"
-
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
@@ -1629,10 +1622,9 @@ keyv@^4.5.3:
   dependencies:
     json-buffer "3.0.1"
 
-lamejs@^1.2.1:
+"lamejs@github:zhuker/lamejs":
   version "1.2.1"
-  resolved "https://registry.yarnpkg.com/lamejs/-/lamejs-1.2.1.tgz#0f92d38729213f106d4a19ded20821da7e89c8e4"
-  integrity sha512-s7bxvjvYthw6oPLCm5pFxvA84wUROODB8jEO2+CE1adhKgrIvVOlmMgY8zyugxGrvRaDHNJanOiS21/emty6dQ==
+  resolved "https://codeload.github.com/zhuker/lamejs/tar.gz/582bbba6a12f981b984d8fb9e1874499fed85675"
   dependencies:
     use-strict "1.0.1"
 

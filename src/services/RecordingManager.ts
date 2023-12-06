@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import AudioConverter from "@/services/AudioConverter";
 
 /**
  * Manages audio recording functionality.
@@ -61,16 +62,18 @@ class RecordingManager {
     };
 
     /**
-     * Downloads the recorded audio.
+     * Downloads the recorded audio encoded in mp3 MP3.
      */
-    public downloadRecording = () => {
+    public downloadRecording = async () => {
         if (this.audioBlob) {
-            const url = URL.createObjectURL(this.audioBlob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'recording.webm';
-            a.click();
-            URL.revokeObjectURL(url);
+            const audioConverter = new AudioConverter();
+            await audioConverter.convertToMp3(this.audioBlob, (mp3Url: string) => {
+                const a = document.createElement('a');
+                a.href = mp3Url;
+                a.download = 'recording.mp3';
+                a.click();
+                URL.revokeObjectURL(mp3Url);
+            });
         }
     };
 
@@ -81,6 +84,8 @@ class RecordingManager {
     private handleDataAvailable = (event: BlobEvent) => {
         if (event.data && event.data.size > 0) {
             this.audioBlob = event.data;
+            console.log("Recorded audio MIME type:", event.data.type);
+            console.log("Recorded audio blob size:", event.data.size);
         }
     };
 
